@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- making page mobile friendly-->
+    <link rel="stylesheet" href="css/style.css"> <!--adding external stylesheet-->
+    <title>Places in Poland</title>
+    <!-- Load an icon library to show a hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Beautiful places in Poland</h1><!--title of the page-->
+      <div class="topnav">
+        <div id="myLinks">
+         <a href="home.html">Home</a>
+         <a href="map.html">Map</a>
+         <a href="contact.html">Contact</a>
+        </div>
+  <!--hamburger-->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+       </div>
+
+       <div class="content">
+         <h2>Introduction</h2>
+         <p>Welcome to the page that will introduce you Poland's most beatiful places. Here you will find basic
+         information about the spots. You can consider this page to be your inspiraion board if you are planning to visit
+       Poland but don't know what this country has to offer. Fall in love with magnificent landscapes and natural wonders.</p>
+       </div>
+    </header>
+
+
+    <div class="slideshow-container">
+
+      <div class="slides">
+        <div class="number">1/3</div>
+        <img src="img/raj1.jpg" alt="image1">
+      </div>
+
+      <div class="slides">
+        <div class="number">2/3</div>
+        <img src="img/szczeliniec1.jpg" alt="image2">
+      </div>
+
+      <div class="slides">
+        <div class="number">3/3</div>
+        <img src="img/slowinski1.jpg" alt="image3">
+      </div>
+    </div>
+    <br> <!--line breaker-the dots-->
+<div>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+
+
+    <div class="footer">
+      <footer> <!--personal information-->
+      Created by Katarzyna Kozak | Student number: P2607605
+      </footer>
+    </div>
+
+
+<script>
+//Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu
+function myFunction() {
+let x = document.getElementById("myLinks");
+if (x.style.display === "block") {
+x.style.display = "none";
+} else {
+x.style.display = "block";
+}
+}
+
+
+//Slideshow
+
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+var i;
+var slides = document.getElementsByClassName("slides");
+var dots = document.getElementsByClassName("dot");
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+slideIndex++;
+if (slideIndex > slides.length) {slideIndex = 1}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- making page mobile friendly-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact form</title>
+    <!-- Load an icon library to show a hamburger menu on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Beautiful places in Poland</h1> <!--title of the page-->
+      <div class="topnav">
+        <div id="myLinks">
+         <a href="home.html">Home</a>
+         <a href="map.html">Map</a>
+         <a href="contact.html">Contact</a>
+        </div>
+  <!--hamburger-->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+       </div>
+
+       <div class="content">
+         <h2>Contact us</h2>
+         <p>If you have any questions about mentioned places or want a more detailed advice
+           on where to travel, feel free to contact us using the form below!</p>
+       </div>
+    </header>
+
+
+<div class="content">
+  <form action="/action_page.php">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
+
+    <label for="email">E-mail address</label>
+    <input type="text" id="email" name="email" placeholder="Your e-mail..">
+
+    <label for="subject">Ask a question</label>
+    <textarea id="question" name="question" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
+
+
+
+    <div class="footer">
+      <footer> <!--personal information-->
+      Created by Katarzyna Kozak | Student number: P2607605
+      </footer>
+    </div>
+
+
+    <script>
+//Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu
+    function myFunction() {
+  let x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+</script>
+
+  </body>
+</html>
